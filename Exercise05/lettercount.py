@@ -14,10 +14,9 @@ script, filename = argv
 #from collections import defaultdict
 count = 0
 
-text = open(filename)
-reading = text.read()
+lowered = open(filename).read().lower()
 
-lowered = reading.lower()
+#lowered = reading.lower()
 
 text_list = []
 text_list += lowered
@@ -47,6 +46,11 @@ for i, v in enumerate(text_list):
 #using a list
 for i, letter in enumerate(alphabet):
 	print stored_counts[letter]
+
+lowered.close()
+# close file when you're done reading it so others can access it
+
+
 
 #print stored_counts [97:121]
 		#stored_counts = {numbered: count+1}
